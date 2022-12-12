@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한류</title>
+    <script>
+        function display(){
+            let tagArray = document.getElementsByClassName("ul");
+            for(let i=0;i<tagArray.length;i++){
+                let tag = tagArray[i];
+                if(tag.style.display=="none"){
+                    tag.style.display = "block";
+                }
+                else{
+                    tag.style.display = "none";
+                }
+            }
+        }
+        function show(){
+            let tagArray2 = document.getElementsByClassName("li");
+            for(let j=0;j<tagArray2.length;j++){
+                let tag2 = tagArray2[j];
+                tag2.style.display = "block";
+            }
+        }
+        function hide(){
+            let tagArray2 = document.getElementsByClassName("li");
+            for(let j=0;j<tagArray2.length;j++){
+                let tag2 = tagArray2[j];
+                tag2.style.display = "none";
+            }
+        }
+    </script>
+    <style>
+        header{
+            padding: 20px;
+            color: white;
+        }
+        .menu{
+            width: 10%;
+            padding: 50px;
+            font-size: large;
+            float: right;
+            color: white;
+            white-space: nowrap;
+            text-align: right;
+        }
+        #menuLogo{
+            font-size: xx-large;
+        }
+        .section{
+            padding: 100px;
+            font-family: serif;
+            float: left;
+            font-size:7em;
+            text-indent: 1em;
+            color: white;
+            text-shadow: 8px 8px 15px rgb(19, 19, 34);
+            white-space: nowrap;
+        }
+        #koreaWave{
+            text-shadow: none;
+            font-size: 1.5em;
+            opacity: 0.1;
+            animation-name: bomb;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes bomb{
+            from{color: black}
+            to{color:white}
+        }
+        .ul{
+            display: none;
+            list-style: none;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+        .li{
+            display: none;
+            font-size: 0.6em;
+            font-weight: lighter;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+    </style>
+</head>
+<body style="background-image: url('background\ 1920x960.png');">
+    <header>
+        <form name="fo" method="get">
+            Username : <input type="text" size="15" value="">
+            Password : <input type="password" size="15" value="">
+            <input type="submit" value="log in">
+        </form>
+    </header>
+    <nav class="menu">
+        <br>
+        <p id="menuLogo" onclick="display()">☰</p>
+        <hr class = "ul">
+        <ul class = "ul">
+            <a href="meaning.html"><li>개요</li></a><br>
+            <span onmouseover="show()" onmouseout="hide()"><a href="kpop.html"><li>종류</li></a>
+                <ul>
+                    <a href="kpop.html"><li class="li"><br>K-POP</li></a>
+                    <a href="drama.html"><li class="li"><br>드라마</li></a>
+                    <a href="movie.html"><li class="li"><br>영화</li></a>
+                </ul></span>
+            <br><a href="quiz.html"><li>QUIZ</li></a>
+        </ul>
+    </nav>
+    <a href="index.html"><section class="section"><br><br>　한류<br><span id="koreaWave"><em>Korea Wave</em></span></section></a>
+</body>
+</html>

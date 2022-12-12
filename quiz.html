@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한류</title>
+    <script>
+        function guess(ans){
+            let user = prompt("정답은 무엇입니까?");
+            let button = document.getElementById("ans1");
+            if(user == ans){
+                let ret = confirm("정답입니다");
+            }
+            else{
+                let ret = confirm("오답입니다");
+            }
+        }
+    </script>
+    <style>
+        header{
+            height: 30%;
+            padding: 50px;
+            font-family: serif;
+            font-size: 5em;
+            color: white;
+            white-space: nowrap;
+        }
+        nav{
+            height: 80em;
+            width: 15%;
+            float: left;
+            background: white;
+        }
+        section{
+            height: 80em;
+            background: white;
+            padding: 20px;
+        }
+        footer{
+            background: white;
+            padding: 20px;
+            font-size: 0.8em;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        ul{
+            color: navy;
+            list-style: none;
+            font-size: 1.5em;
+        }
+        .li{
+            font-size: 0.5em;
+        }
+
+        .foot{
+            font-size: 0.8em;
+        }
+        ul li:hover{
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body style="background-image: url('background\ 1920x960.png');">
+    <a href="index.html"><header>한류</header></a>
+    <nav>
+        <ul class = "ul">
+            <a href="meaning.html"><li>개요</li></a><br>
+            <a href="kpop.html"><li>종류</li></a>
+                <ul>
+                    <a href="kpop.html"><li class="li"><br>K-POP</li></a>
+                    <a href="drama.html"><li class="li"><br>드라마</li></a>
+                    <a href="movie.html"><li class="li"><br>영화</li></a>
+                </ul>
+            <br><a href="quiz.html"><li><b>QUIZ</b></li></a>
+        </ul>
+    </nav>
+    <section class="section">
+        <h3>QUIZ</h3><hr>
+        <p>1. 대한민국의 대중문화를 포함한 한국과 관련된 것들이 대한민국 이외의 나라에서 인기를 얻는 현상을 무엇이라 하는가? <input type="button" value="정답 입력" onclick="guess('한류')" id="ans1"></p>
+        <p>2. 한국 가수 최초로 빌보드 핫 100차트에 진입한 가수는 누구인가? <input type="button" value="정답 입력" onclick="guess('원더걸스')"></p>
+        <p>3. 넷플릭스 오리지널 드라마로서 2021년에 개봉하여 1억 이상의 시청자수를 기록한 드라마는 무엇인가? <input type="button" value="정답 입력" onclick="guess('오징어게임')"></p>
+        <p>4. 칸영화제에서 한국 영화 역사상 최초로 황금종려장을 수여한 영화는 무엇인가? <input type="button" value="정답 입력" onclick="guess('기생충')"></p>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>
